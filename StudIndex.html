@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Student Registration</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #74b9ff, #0984e3);
+      }
+
+      .container {
+        width: 420px;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #2d3436;
+      }
+
+      label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 6px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 15px;
+      }
+
+      .radio-group,
+      .checkbox-group {
+        margin-top: 5px;
+      }
+
+      .radio-group input,
+      .checkbox-group input {
+        margin-right: 5px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        margin-top: 25px;
+        padding: 12px;
+        background: #0984e3;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background: #0652dd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Student Registration Form</h2>
+
+      <form action="StudRegIndex.jsp" method="post">
+        <label>Name</label>
+        <input type="text" name="name" />
+
+        <label>Roll Number</label>
+        <input type="text" name="roll" />
+
+        <label>Email</label>
+        <input type="email" name="email" />
+
+        <label>Course</label>
+        <select name="course">
+          <option>MCA</option>
+          <option>MBA</option>
+          <option>BCA</option>
+          <option>BBA</option>
+        </select>
+
+        <label>Gender</label>
+        <div class="radio-group">
+          <input type="radio" name="gender" value="Male" /> Male
+          <input type="radio" name="gender" value="Female" /> Female
+        </div>
+
+        <label>Hobbies</label>
+        <div class="checkbox-group">
+          <input type="checkbox" name="hobby" value="Reading" /> Reading
+          <input type="checkbox" name="hobby" value="Sports" /> Sports
+          <input type="checkbox" name="hobby" value="Music" /> Music
+        </div>
+
+        <input type="submit" value="Register" />
+      </form>
+    </div>
+  </body>
+</html>
